@@ -1,0 +1,23 @@
+\section*{Abstract}
+
+Background: Stroke is a common cause of adult disability. Expert opinion is that about 20\% of patients should receive thrombolysis to break up a clot causing the stroke. Currently, 11–12\% of patients in England and Wales receive this treatment, ranging between 2\% and 24\% between hospitals.
+
+Objectives: By combining clinical pathway simulation and machine learning of thrombolysis decision-making and outcomes, we sought to better understand the source of variation in thrombolysis use and the effect on outcomes.
+
+Methods: Monte-Carlo simulation was used to model the flow of patients through the emergency stroke pathway at each hospital, taking into account both average speeds and variation. XGBoost machine learning models were used to learn which patients would receive thrombolysis at each stroke team, and learn and predict outcomes with and without thrombolysis. The models were used to predict the effect of alternative improvement strategies.
+
+Results: Combining potential changes (improving arrival-to-thrombolysis times to 30 mins, reducing ambulance call-to-hospital-arrival times by 15 minutes, having all teams attain the current upper-quartile performance in determining stroke onset time (79.6\%), and applying decision making similar to high thrombolysing units) would be expected to increase thrombolysis use in patients arriving by ambulance from 13\% to 20\% and double the clinical benefit (additional patients discharged mRS 0-1) from thrombolysis. The largest single factor is differences in clinical decision-making, especially around mild stroke (which make up half of all stroke admissions). Using our outcome machine learning we found that high thrombolysing units are predicted to be generating more net benefit (including better avoidance of mortality and severe disability) than low thrombolylsing units. A health economics model, using the output from the outcome prediction model, estimated that thrombolysis produces an additional 0.26 QALY for each person treated.
+
+Conclusions: There is significant inter-hospital variation in use of thrombolysis that is caused by hospital processes and differences in decision-making. Improving processes and adopting the decision making of higher-thrombolysing units would be expected to improve both thrombolysis use and outcomes. Pathway analysis and machine learning should allow stroke teams to better understand, and improve, their own pathways.
+
+\section*{Plain Language Summary}
+
+\textbf{What is the problem?} Use of clot-busting treatment (`\textit{thrombolysis}') in stroke varies a great deal between hospitals.
+
+\textbf{What did we know?} We knew that the largest cause of this variation was in how doctors decide which patients are suitable for thrombolysis. We knew other significant causes of variation were how fast hospitals can decide who to give thrombolysis to (which requires a specialist head scan). Hospitals also vary in how many patients they work out when the patient had their stroke.
+
+\textbf{What did we not know?} We did not know how addressing all these causes of variation in thrombolysis use and speed would affect the number of people who receive thrombolysis and, most importantly, how patient outcomes would change.
+
+\textbf{What did we do?} We used machine learning to find patterns in which patients each hospital gives thrombolysis to, and how that thrombolysis affects patient outcome. We used clinical pathway simulation to simulate, in a computer, many patients moving through each hospitals emergency stroke pathway. We use this simulation model to test changes to the pathway (such as making it faster), and see what the likely effect of thrombolysis use and patient outcomes would be.
+
+\textbf{What did we find out?} We found that use of thrombolysis could be increased from 13 patients in 100 being given it, to 20 patients in 100 being given. But each hospital should have its own target which takes into account their local population. We found that overall, the benefit from thrombolysis could be doubled - with more patients receiving it and with patients receiving it earlier which gives all those patients a better chance of being discharged from hospital able to live independently.
